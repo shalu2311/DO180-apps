@@ -1,0 +1,36 @@
+Cloning "https://github.com/shalu2311/DO180-appseetrt" ...
+	Commit:	00f89972e096a9a21059fa2a5eee0c540627c721 (Update index.php)
+	Author:	shalu2311 <42956133+shalu2311@users.noreply.github.com>
+	Date:	Wed Sep 22 15:51:06 2021 +0530
+time="2022-07-10T04:49:17Z" level=info msg="Not using native diff for overlay, this may cause degraded performance for building images: kernel has CONFIG_OVERLAY_FS_REDIRECT_DIR enabled"
+I0710 04:49:17.129555       1 defaults.go:102] Defaulting to storage driver "overlay" with options [mountopt=metacopy=on].
+Caching blobs under "/var/cache/blobs".
+Trying to pull image-registry.openshift-image-registry.svc:5000/openshift/nodejs@sha256:2d4df5e2be090879e4947c396475c078bae495c85d02ab3d953ed8cdc806aecb...
+Getting image source signatures
+Copying blob sha256:db75fb66b7757bf7e48909dc7904b4956ab642d5f1d47ddf008855a2f0d7e574
+Copying blob sha256:0d875a68bf996a2e45cd381e8eb3c8b1efa6191d8e3f6ec98be685c7e9823815
+Copying blob sha256:950c796b5dbc22ecb4f4bd661013c9286715d238a0dbdd9b7ed1406c395086a1
+Copying blob sha256:8dfe9326f733b815c486432e93e0a97f03e90e7cc35def9511cd1efa7f917f56
+Copying config sha256:dfd08e2f2735ebcde1863a8446490a6460995b8843cb9cf2c1f2f55a510551eb
+Writing manifest to image destination
+Storing signatures
+Generating dockerfile with builder image image-registry.openshift-image-registry.svc:5000/openshift/nodejs@sha256:2d4df5e2be090879e4947c396475c078bae495c85d02ab3d953ed8cdc806aecb
+Adding transient rw bind mount for /run/secrets/rhsm
+STEP 1/9: FROM image-registry.openshift-image-registry.svc:5000/openshift/nodejs@sha256:2d4df5e2be090879e4947c396475c078bae495c85d02ab3d953ed8cdc806aecb
+STEP 2/9: LABEL "io.openshift.build.commit.author"="shalu2311 <42956133+shalu2311@users.noreply.github.com>"       "io.openshift.build.commit.date"="Wed Sep 22 15:51:06 2021 +0530"       "io.openshift.build.commit.id"="00f89972e096a9a21059fa2a5eee0c540627c721"       "io.openshift.build.commit.ref"="trcb"       "io.openshift.build.commit.message"="Update index.php"       "io.openshift.build.source-location"="https://github.com/shalu2311/DO180-appseetrt"       "io.openshift.build.source-context-dir"="nodejs-app"       "io.openshift.build.image"="image-registry.openshift-image-registry.svc:5000/openshift/nodejs@sha256:2d4df5e2be090879e4947c396475c078bae495c85d02ab3d953ed8cdc806aecb"
+STEP 3/9: ENV OPENSHIFT_BUILD_NAME="nodejs-dev-1"     OPENSHIFT_BUILD_NAMESPACE="nodejsapp"     OPENSHIFT_BUILD_SOURCE="https://github.com/shalu2311/DO180-appseetrt"     OPENSHIFT_BUILD_REFERENCE="trcb"     OPENSHIFT_BUILD_COMMIT="00f89972e096a9a21059fa2a5eee0c540627c721"     npm_config_registry="http://nexus-common.apps.ap410.prod.nextcle.com/repository/nodejs"
+STEP 4/9: USER root
+STEP 5/9: COPY upload/src /tmp/src
+STEP 6/9: RUN chown -R 1001:0 /tmp/src
+STEP 7/9: USER 1001
+STEP 8/9: RUN /usr/libexec/s2i/assemble
+---> Installing application source ...
+---> Installing all dependencies
+npm ERR! code ETARGET
+npm ERR! notarget No matching version found for express@4.20.
+npm ERR! notarget In most cases you or one of your dependencies are requesting
+npm ERR! notarget a package version that doesn't exist.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /opt/app-root/src/.npm/_logs/2022-07-10T04_49_34_216Z-debug.log
+error: build error: error building at STEP "RUN /usr/libexec/s2i/assemble": error while running runtime: exit status 1
