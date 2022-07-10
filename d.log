@@ -1,0 +1,46 @@
+Environment: 
+	DEV_MODE=false
+	NODE_ENV=production
+	DEBUG_PORT=5858
+Launching via npm...
+npm info using npm@8.1.2
+npm info using node@v16.13.1
+npm timing npm:load:whichnode Completed in 0ms
+npm timing config:load:defaults Completed in 1ms
+npm timing config:load:file:/usr/lib/node_modules/npm/npmrc Completed in 1ms
+npm timing config:load:builtin Completed in 1ms
+npm timing config:load:cli Completed in 2ms
+npm timing config:load:env Completed in 0ms
+npm timing config:load:project Completed in 1ms
+npm timing config:load:file:/opt/app-root/src/.npmrc Completed in 0ms
+npm timing config:load:user Completed in 0ms
+npm timing config:load:file:/opt/app-root/src/.npm-global/etc/npmrc Completed in 0ms
+npm timing config:load:global Completed in 1ms
+npm timing config:load:validate Completed in 1ms
+npm timing config:load:credentials Completed in 1ms
+npm timing config:load:setEnvs Completed in 1ms
+npm timing config:load Completed in 10ms
+npm timing npm:load:configload Completed in 11ms
+npm timing npm:load:setTitle Completed in 0ms
+npm timing npm:load:setupLog Completed in 1ms
+npm timing config:load:flatten Completed in 3ms
+npm timing npm:load:cleanupLog Completed in 1ms
+npm timing npm:load:configScope Completed in 0ms
+npm timing npm:load:projectScope Completed in 1ms
+npm timing npm:load Completed in 19ms
+
+> nodejs-app@1.0.0 start
+> node server.js
+
+Example app listening on port 8080!
+TypeError: Cannot read properties of undefined (reading 'HOSTNAME')
+    at /opt/app-root/src/server.js:7:59
+    at Layer.handle [as handle_request] (/opt/app-root/src/node_modules/express/lib/router/layer.js:95:5)
+    at next (/opt/app-root/src/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/opt/app-root/src/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/opt/app-root/src/node_modules/express/lib/router/layer.js:95:5)
+    at /opt/app-root/src/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/opt/app-root/src/node_modules/express/lib/router/index.js:346:12)
+    at next (/opt/app-root/src/node_modules/express/lib/router/index.js:280:10)
+    at expressInit (/opt/app-root/src/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/opt/app-root/src/node_modules/express/lib/router/layer.js:95:5)
